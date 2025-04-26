@@ -1,17 +1,29 @@
-// Клас Record
 import java.time.LocalDate;
 
 public class Record {
     private Habit habit;
-    private LocalDate timeCreated;
-    private boolean isPerformed;
-    private LocalDate timeUpdated;
+    private LocalDate date;
+    private boolean completed;
 
-    public Record(Habit habit, LocalDate timeCreated, boolean isPerformed, LocalDate timeUpdated) {
+    public Record(Habit habit, LocalDate date, boolean completed) {
         this.habit = habit;
-        this.timeCreated = timeCreated;
-        this.isPerformed = isPerformed;
-        this.timeUpdated = timeUpdated;
+        this.date = date;
+        this.completed = completed;
     }
 
+    public Habit getHabit() {
+        return habit;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
 }
